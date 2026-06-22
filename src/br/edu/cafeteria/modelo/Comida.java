@@ -1,22 +1,21 @@
 package br.edu.cafeteria.modelo;
 
 public class Comida extends Produto {
-	
-	    private int tempoPreparo;
-	    private boolean isVeganoSemGluten;
+    private boolean vegano;
+    private boolean semGluten;
+    private boolean semLactose;
+    private int tempoPreparoMinutos;
 
-	    // O construtor usa o "super" para passar os dados para a classe mãe
-	    public Comida(int id, String nome, double precoBase, int quantidadeEstoque, int tempoPreparo, boolean isVeganoSemGluten) {
-	        super(id, nome, precoBase, quantidadeEstoque);
-	        this.tempoPreparo = tempoPreparo;
-	        this.isVeganoSemGluten = isVeganoSemGluten;
-	    }
+    public Comida(int codigo, String nome, double precoBase, int quantidadeEstoque, boolean vegano, boolean semGluten, boolean semLactose, int tempoPreparoMinutos) {
+        super(codigo, nome, precoBase, quantidadeEstoque);
+        this.vegano = vegano;
+        this.semGluten = semGluten;
+        this.semLactose = semLactose;
+        this.tempoPreparoMinutos = tempoPreparoMinutos;
+    }
 
-	    // Getters e Setters específicos
-	    public int getTempoPreparo() { return tempoPreparo; }
-	    public void setTempoPreparo(int tempoPreparo) { this.tempoPreparo = tempoPreparo; }
-
-	    public boolean isVeganoSemGluten() { return isVeganoSemGluten; }
-	    public void setVeganoSemGluten(boolean veganoSemGluten) { isVeganoSemGluten = veganoSemGluten; }
-	}
-
+    public boolean isVegano() { return vegano; }
+    public boolean isSemGluten() { return semGluten; }
+    public boolean isSemLactose() { return semLactose; }
+    public int getTempoPreparoMinutos() { return tempoPreparoMinutos; }
+}

@@ -9,7 +9,7 @@ public class ItemPedido {
 	    public ItemPedido(Produto produto, int quantidade) {
 	        this.produto = produto;
 	        this.quantidade = quantidade;
-	        this.precoUnitarioNoMomento = produto.getPrecoBase(); // Congela o preço atual
+	        this.precoUnitarioNoMomento = produto.getPrecoBase();
 	    }
 
 	    public double getSubtotal() {
